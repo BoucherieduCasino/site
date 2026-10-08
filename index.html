@@ -138,11 +138,11 @@
     html { scroll-behavior: smooth; }
 
     /* Décale les ancres pour qu'elles ne soient pas masquées par la nav fixe */
-    section[id], #hero {
+    section[id], #hero, #ou-trouver {
       scroll-margin-top: 170px;
     }
     @media (max-width: 900px) {
-      section[id], #hero {
+      section[id], #hero, #ou-trouver {
         scroll-margin-top: 90px;
       }
     }
@@ -942,7 +942,6 @@
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#about">Notre histoire</a></li>
-      <li><a href="#produits">Produits</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Nous contacter</a>
@@ -957,7 +956,7 @@
         Du producteur à votre assiette — une entreprise 100% locale, ancrée dans le canton de Vaud, qui maîtrise chaque étape avec rigueur et transparence.
       </p>
       <div class="hero-actions">
-        <a href="#produits" class="btn-primary">Découvrir nos produits</a>
+        <a href="#ou-trouver" class="btn-primary">Où trouver nos produits</a>
         <a href="#about" class="btn-secondary">Notre histoire</a>
       </div>
     </div>
@@ -1051,7 +1050,7 @@
           </p>
         </div>
       </div>
-      <div class="service-card reveal">
+      <div class="service-card reveal" id="ou-trouver">
         <span class="service-num">04</span>
         <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M24 6 L24 28" stroke-linecap="round"/>
@@ -1110,94 +1109,6 @@
         <div class="about-feat"><div class="feat-dot"></div><span>Equipe qualifiée</span></div>
       </div>
     </div>
-  </section>
-
-  <!-- PRODUITS -->
-  <section id="produits">
-    <div class="section-header reveal">
-      <div class="section-label"><span>Notre gamme</span></div>
-      <h2>Nos <em>produits</em> de viande fraîche</h2>
-    </div>
-    <div class="produits-grid">
-      <div class="produit-card reveal">
-        <div class="produit-icon">🔥</div>
-        <h4>Grillades</h4>
-        <ul class="produit-list">
-          <li>Spare ribs (mariné smoky)</li>
-          <li>Steak haché de bœuf</li>
-          <li>Chipolatas de veau</li>
-          <li>Chipolatas de veau lardée</li>
-          <li>Chipolatas de porc (curry, paprika, nature)</li>
-          <li>Escargot (Tortillon)</li>
-          <li>Saucisse de veau</li>
-          <li>Schübling</li>
-          <li>Merguez</li>
-        </ul>
-      </div>
-      <div class="produit-card reveal">
-        <div class="produit-icon">🍢</div>
-        <h4>Brochettes</h4>
-        <ul class="produit-list">
-          <li>Porc (nature ou marinée moutarde)</li>
-          <li>Filet mignon lardé (nature ou marinée à l'ail)</li>
-          <li>Poulet (nature ou marinée curry-sésame)</li>
-          <li>Bœuf (nature ou marinée au brandy)</li>
-        </ul>
-      </div>
-      <div class="produit-card reveal">
-        <div class="produit-icon">🐷</div>
-        <h4>Viande de porc</h4>
-        <ul class="produit-list">
-          <li>Filet (en tranche ou en rôti, nature ou mariné à l'ail)</li>
-          <li>Filet mignon</li>
-          <li>Côtelettes (nature ou marinée moutarde)</li>
-          <li>Tranche de cou (nature ou marinée)</li>
-          <li>Rôti du cou (idéal pour vos broches)</li>
-          <li>Cordon bleu à l'houblonnier <em>(Spécialité du Casino)</em></li>
-          <li>Tranche panée</li>
-          <li>Émincé</li>
-        </ul>
-      </div>
-      <div class="produit-card reveal">
-        <div class="produit-icon">🐮</div>
-        <h4>Viande de bœuf</h4>
-        <ul class="produit-list">
-          <li>Viande hachée</li>
-          <li>Steak (nature ou mariné smoky)</li>
-          <li>Côte maturée</li>
-          <li>Émincé</li>
-        </ul>
-      </div>
-      <div class="produit-card reveal">
-        <div class="produit-icon">🥐</div>
-        <h4>Produits en pâte</h4>
-        <ul class="produit-list">
-          <li>Croissant au jambon</li>
-          <li>Pâtés vaudois</li>
-        </ul>
-      </div>
-      <div class="produit-card reveal">
-        <div class="produit-icon">🥓</div>
-        <h4>Charcuterie maison</h4>
-        <ul class="produit-list">
-          <li>Saucisse sèche de porc</li>
-          <li>Saucisse sèche de bœuf</li>
-          <li>Saucisse à rôtir (porc)</li>
-          <li>Saucisse à rôtir à la tartuffata <em>(arôme de truffe)</em></li>
-          <li>Jambon de campagne tranché</li>
-          <li>Guanciale <em>(pour vos carbonara)</em></li>
-          <li>Lardons</li>
-          <li>Lard fumé (en morceau ou tranché)</li>
-          <li>Terrine campagnarde</li>
-          <li>Coppa (en tranche ou en morceau)</li>
-        </ul>
-        <p class="produit-note">✓ Tous nos produits de charcuterie sont faits maison.</p>
-      </div>
-    </div>
-    <p class="produits-footer reveal">
-      <em>Pour les produits marinés, un supplément d'environ 1 à 2 CHF/kg est appliqué.<br>
-      Merci d'indiquer les quantités souhaitées (poids, paquets, nombre de tranches) lors de votre commande.</em>
-    </p>
   </section>
 
   <!-- CONTACT -->
