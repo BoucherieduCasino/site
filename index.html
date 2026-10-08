@@ -933,6 +933,22 @@
     }
     .path-card:hover .path-go { color: var(--red); }
 
+    .garantie {
+      max-width: 1100px; margin: 0 auto 6rem; padding: 2.5rem 2.2rem;
+      display: flex; gap: 2.5rem; align-items: center;
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .garantie-seal {
+      flex: 0 0 auto; width: 130px; height: 130px; border-radius: 50%;
+      border: 2px solid var(--red); outline: 1px solid var(--red); outline-offset: 5px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: var(--red); text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.62rem;
+    }
+    .garantie-seal strong { font-size: 1.05rem; letter-spacing: 0.08em; margin: 0.2rem 0; }
+    .garantie-text h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; margin: 0.5rem 0 0.6rem; }
+    .garantie-text p { font-size: 0.92rem; line-height: 1.7; color: var(--charcoal-soft); }
+    .garantie-text a { color: var(--charcoal); text-decoration: none; }
+    .garantie-text a:hover { color: var(--red); }
     .reveal {
       opacity: 0; transform: translateY(28px);
       transition: opacity 0.7s ease, transform 0.7s ease;
@@ -956,6 +972,7 @@
       .lbl-short { display: inline; }
       .tab-section { padding: 3.5rem 1.5rem 4.5rem; }
       .paths { grid-template-columns: 1fr; padding: 3rem 1.5rem 4rem; }
+      .garantie { flex-direction: column; text-align: center; margin: 0 1.5rem 4rem; padding: 2.5rem 0.5rem; }
       #hero {
         grid-template-columns: 1fr;
         padding-top: 0;
@@ -1055,29 +1072,40 @@
     </div>
     <div class="stat reveal">
       <span class="stat-num">7<em>j/7</em></span>
-      <span class="stat-label">Self-Service ouvert</span>
+      <span class="stat-label">Self-Service · bientôt</span>
     </div>
     <div class="stat reveal">
       <span class="stat-num"><em>VD</em></span>
       <span class="stat-label">Éleveurs vaudois</span>
     </div>
+  </div>
 
   <!-- Aiguillage par type de client -->
   <section class="paths">
     <a href="#abattage" class="path-card reveal">
       <span class="path-kicker">Agriculteurs &amp; boucheries</span>
-      <h3>Vous souhaitez faire abattre vos bêtes ?</h3>
+      <h3>Vous souhaitez faire abattre vos bêtes&nbsp;?</h3>
       <p>Abattage le lundi et le mercredi matin, maturation sur os, découpe, mise sous vide et étiquetage selon vos besoins.</p>
       <span class="path-go">Voir l'abattage →</span>
     </a>
     <a href="#acheter" class="path-card reveal">
       <span class="path-kicker">Particuliers</span>
-      <h3>Vous cherchez de la viande locale ?</h3>
+      <h3>Vous cherchez de la viande locale&nbsp;?</h3>
       <p>Retrouvez nos produits chez nos revendeurs partenaires, commandez par téléphone ou WhatsApp, et bientôt dans notre self-service.</p>
       <span class="path-go">Acheter notre viande →</span>
     </a>
   </section>
-  </div>
+
+  <!-- Garanties -->
+  <section class="garantie reveal">
+    <div class="garantie-seal" aria-hidden="true"><span>Contrôle</span><strong>Qualité</strong><span>UPSV</span></div>
+    <div class="garantie-text">
+      <span class="path-kicker">Nos garanties</span>
+      <h3>Contrôle qualité certifié par l'UPSV</h3>
+      <p>Le Service contrôle qualité de l'Union Professionnelle Suisse de la Viande confirme que nos produits font l'objet d'analyses microbiologiques et chimiques régulières, conformément à la solution de branche de l'Économie carnée suisse. Attestation valable jusqu'en avril 2029.</p>
+      <a href="certificat-controle-qualite-upsv-2026.pdf" target="_blank" rel="noopener" class="path-go">Voir l'attestation (PDF) →</a>
+    </div>
+  </section>
 
   </div>
 
