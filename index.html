@@ -635,6 +635,33 @@
     .casino-source {
       max-width: 1100px; margin: 3.5rem auto 0; font-size: 0.75rem; color: var(--warm-gray); font-style: italic;
     }
+    .hero-right { padding: 0; }
+    .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero-photo-caption {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 4rem 2rem 1.6rem; text-align: center;
+      background: linear-gradient(to top, rgba(20,20,30,0.75), rgba(20,20,30,0));
+    }
+    .hero-photo-caption .hero-quote { color: #fff; margin: 0 0 1rem; }
+    .hero-photo-caption .hero-quote::before, .hero-photo-caption .hero-quote::after { background: rgba(255,255,255,0.6); }
+    .hero-photo-caption span { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
+    .photo-feature {
+      max-width: 1100px; margin: 4rem auto 0; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3.5rem; align-items: center;
+    }
+    .photo-feature img { width: 100%; height: 520px; object-fit: cover; display: block; }
+    .photo-feature-text h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.2; margin: 0.6rem 0 1rem; }
+    .photo-feature-text p { font-size: 0.95rem; line-height: 1.8; color: var(--charcoal-soft); margin-bottom: 1rem; }
+    .photo-feature-note { border-left: 2px solid var(--red); padding-left: 1.2rem; font-size: 0.88rem !important; }
+    .photo-row { max-width: 1100px; margin: 4rem auto 0; display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 1.2rem; }
+    .photo-row figure { margin: 0; }
+    .photo-row img { width: 100%; height: 360px; object-fit: cover; display: block; }
+    .photo-row figcaption { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--warm-gray); margin-top: 0.7rem; }
+    .about-photo { padding: 0; position: relative; }
+    .about-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .about-photo-caption {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 3rem 1.5rem 1.2rem; text-align: center;
+      font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: #fff;
+      background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0));
+    }
     /* ── PRODUITS ── */
     #produits {
       padding: 8rem 5rem;
@@ -1005,7 +1032,11 @@
       }
       #hero::before { inset: 0; }
       .hero-left { padding: 3.5rem 1.5rem 2rem; text-align: left; }
-      .hero-right { min-height: 400px; padding: 2rem; border-left: none; border-top: 1px solid var(--line); }
+      .hero-right { min-height: 420px; padding: 0; border-left: none; border-top: 1px solid var(--line); }
+      .photo-feature { grid-template-columns: 1fr; gap: 2rem; margin-top: 3rem; }
+      .photo-feature img { height: 420px; }
+      .photo-row { grid-template-columns: 1fr; margin-top: 3rem; }
+      .photo-row img { height: 300px; }
       .hero-emblem { width: 240px; height: 240px; }
       .hero-emblem-main { font-size: 2rem; }
       .stats-bar { grid-template-columns: 1fr 1fr; }
@@ -1076,17 +1107,10 @@
       </div>
     </div>
     <div class="hero-right">
-      <div class="hero-decoration">
-        <div class="hero-emblem">
-          <div class="hero-emblem-circle"></div>
-          <div class="hero-emblem-content">
-            <div class="hero-emblem-top">Boucherie</div>
-            <div class="hero-emblem-main">Casino</div>
-            <div class="hero-emblem-sep"></div>
-            <div class="hero-emblem-bottom">Sàrl</div>
-          </div>
-        </div>
+      <img class="hero-photo" src="img/vue-abattoir-ropraz.jpg" alt="Champs du Jorat au crépuscule, vus depuis l'abattoir de Ropraz" width="1800" height="1350">
+      <div class="hero-photo-caption">
         <p class="hero-quote">« La qualité<br>n'est pas un hasard »</p>
+        <span>Vue depuis l'abattoir de Ropraz</span>
       </div>
     </div>
   </section>
@@ -1139,6 +1163,15 @@
   </section>
 
   <section class="garantie garantie-suite reveal">
+    <div class="garantie-seal" aria-hidden="true"><span>Abattoir</span><strong>Autorisé</strong><span>VD</span></div>
+    <div class="garantie-text">
+      <span class="path-kicker">Abattoir</span>
+      <h3>Abattoir autorisé par le canton de Vaud</h3>
+      <p>L'abattoir de Ropraz est au bénéfice d'une autorisation d'exploiter (n° CH&nbsp;70147821) délivrée par les Affaires vétérinaires du canton de Vaud, conformément à l'ordonnance fédérale sur l'abattage et le contrôle des viandes.</p>
+    </div>
+  </section>
+
+  <section class="garantie garantie-suite reveal">
     <img class="garantie-vignette" src="vignette-entreprise-formatrice.png" alt="Entreprise formatrice – Formation professionnelle suisse – Nous formons des pros" width="130" height="130" loading="lazy">
     <div class="garantie-text">
       <span class="path-kicker">Formation</span>
@@ -1187,6 +1220,15 @@
         </svg>
         <h3>Découpe &amp; préparation</h3>
         <p>Chaque pièce est découpée avec précision par nos bouchers expérimentés selon vos spécifications : poids, présentation, conditionnement sur mesure.</p>
+      </div>
+    </div>
+    <div class="photo-feature reveal">
+      <img src="img/carcasses-maturation.jpg" alt="Demi-carcasses de bœuf en maturation sur os dans la chambre froide de l'abattoir de Ropraz" width="900" height="1200" loading="lazy">
+      <div class="photo-feature-text">
+        <span class="path-kicker">À l'abattoir de Ropraz</span>
+        <h3>Maturation sur os, en chambre froide</h3>
+        <p>Après l'abattage, les carcasses reposent dans notre chambre froide pour une maturation sur os, avant d'être découpées, mises sous vide et étiquetées selon vos besoins.</p>
+        <p class="photo-feature-note"><strong>Abattoir autorisé.</strong> Autorisation d'exploiter n° CH&nbsp;70147821, délivrée par les Affaires vétérinaires du canton de Vaud (DGAV), valable jusqu'au 31&nbsp;décembre 2027.</p>
       </div>
     </div>
   </section>
@@ -1244,6 +1286,11 @@
         </div>
       </div>
     </div>
+    <div class="photo-row reveal">
+      <figure><img src="img/saucisses-aux-choux.jpg" alt="Saucisses aux choux de la Boucherie du Casino dans un panier" width="750" height="1000" loading="lazy"><figcaption>Saucisses aux choux</figcaption></figure>
+      <figure><img src="img/filet-mignon-seche.jpg" alt="Filets mignons séchés tranchés" width="1200" height="900" loading="lazy"><figcaption>Filet mignon séché, notre produit phare</figcaption></figure>
+      <figure><img src="img/saucisses-sechage.jpg" alt="Saucisses suspendues en séchage" width="750" height="1000" loading="lazy"><figcaption>Fabrication maison</figcaption></figure>
+    </div>
   </section>
   </div>
 
@@ -1251,15 +1298,9 @@
   <div class="tab-panel" data-tab="histoire">
   <!-- ABOUT -->
   <section id="about">
-    <div class="about-img">
-      <div class="about-emblem">
-        <div class="about-emblem-text">
-          <div class="top">Boucherie</div>
-          <div class="main">Casino</div>
-          <div class="sep"></div>
-          <div class="bottom">Dany &amp; Romain</div>
-        </div>
-      </div>
+    <div class="about-img about-photo">
+      <img src="img/laboratoire-chapelle.jpg" alt="Laboratoire de la Boucherie du Casino à Chapelle-sur-Moudon" width="1400" height="1050" loading="lazy">
+      <span class="about-photo-caption">Notre laboratoire, au rez-de-chaussée du Casino</span>
     </div>
     <div class="about-content">
       <div class="section-label"><span>Notre histoire</span></div>
